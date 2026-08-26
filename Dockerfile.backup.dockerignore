@@ -1,0 +1,23 @@
+# Per-Dockerfile ignore file (BuildKit): used instead of the top-level
+# .dockerignore for `docker build -f Dockerfile.backup`, since that one
+# excludes src/ (correct for the web-app Dockerfile, wrong for this one —
+# this image's whole job is to run src/backup_nightly.py).
+.env
+.venv
+data
+docs
+.claude
+.superpowers
+.git
+tests
+launchd
+__pycache__
+apps
+Dockerfile
+Dockerfile.backup.dockerignore
+README.md
+railway.json
+apps.yaml
+taxonomy.yaml
+rubric.yaml
+feature-checklist.yaml

@@ -1,0 +1,103 @@
+# rubric.yaml — grading rubric for the overall grade. Data, not contract:
+# tune thresholds freely; every tag must exist in taxonomy.yaml.
+tiers:
+  core:
+    - auth
+    - api-backend
+    - data-modeling
+    - db-migrations
+    - testing-depth
+    - error-handling
+    - frontend-spa
+    - deploy-docker
+    - deploy-infra
+    - privacy-security
+  standard:
+    - api-client
+    - background-jobs
+    - caching
+    - cli-tooling
+    - state-machines
+    - llm-integration
+    - webhooks
+    - frontend-ssr
+    - agents-automation
+  specialty:
+    - charts-svg
+    - email-ingestion
+    - llm-cost-control
+    - payments-money
+    - scraping
+    - websockets-sse
+
+levels:
+  - name: newcomer
+    label: Newcomer
+  - name: beginner
+    label: Beginner
+    breadth: 3
+  - name: junior
+    label: Junior Engineer
+    breadth: 10
+    gates:
+      api-backend: {min_count: 3}
+      data-modeling: {min_count: 3}
+      frontend-spa: {min_count: 2}
+      testing-depth: {min_count: 2}
+      db-migrations: {min_count: 1}
+      auth: {min_count: 1}
+      error-handling: {min_count: 1}
+  - name: mid
+    label: Mid-Level Engineer
+    breadth: 18
+    gates:
+      auth: {min_count: 5, min_avg_complexity: 3.0}
+      api-backend: {min_count: 10, min_avg_complexity: 3.0}
+      data-modeling: {min_count: 10, min_avg_complexity: 3.0}
+      db-migrations: {min_count: 5, min_avg_complexity: 3.0}
+      testing-depth: {min_count: 8, min_avg_complexity: 3.5}
+      error-handling: {min_count: 5, min_avg_complexity: 3.0}
+      frontend-spa: {min_count: 10, min_avg_complexity: 3.0}
+      deploy-docker: {min_count: 2}
+      deploy-infra: {min_count: 3, min_avg_complexity: 3.0}
+      privacy-security: {min_count: 5, min_avg_complexity: 3.0}
+  - name: senior
+    label: Senior Engineer
+    breadth: 24
+    noncore: {tags: 8, min_count: 3}
+    gates:
+      auth: {min_count: 12, min_avg_complexity: 3.5, within_days: 365}
+      api-backend: {min_count: 12, min_avg_complexity: 3.5, within_days: 365}
+      data-modeling: {min_count: 12, min_avg_complexity: 3.5, within_days: 365}
+      db-migrations: {min_count: 12, min_avg_complexity: 3.5, within_days: 365}
+      testing-depth: {min_count: 12, min_avg_complexity: 3.5, within_days: 365}
+      error-handling: {min_count: 12, min_avg_complexity: 3.5, within_days: 365}
+      frontend-spa: {min_count: 12, min_avg_complexity: 3.5, within_days: 365}
+      deploy-docker: {min_count: 12, min_avg_complexity: 3.5, within_days: 365}
+      deploy-infra: {min_count: 12, min_avg_complexity: 3.5, within_days: 365}
+      privacy-security: {min_count: 12, min_avg_complexity: 3.5, within_days: 365}
+
+pairs_with:
+  websockets-sse: [api-backend, frontend-spa]
+  deploy-docker: [deploy-infra, api-backend]
+  deploy-infra: [deploy-docker, api-backend]
+  auth: [api-backend, frontend-spa]
+  db-migrations: [data-modeling]
+  testing-depth: [api-backend, frontend-spa]
+  error-handling: [api-backend]
+  privacy-security: [auth, api-backend]
+  payments-money: [api-backend, data-modeling]
+  webhooks: [api-backend]
+  caching: [api-backend]
+  background-jobs: [deploy-infra, api-backend]
+  frontend-ssr: [frontend-spa]
+  charts-svg: [frontend-spa]
+  api-client: [api-backend]
+  llm-cost-control: [llm-integration]
+  llm-integration: [api-backend]
+  email-ingestion: [api-client]
+  scraping: [api-client]
+  state-machines: [data-modeling]
+  api-backend: [data-modeling]
+  data-modeling: [api-backend]
+  frontend-spa: [api-backend]

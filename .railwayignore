@@ -1,0 +1,11 @@
+.env
+.venv/
+data/
+docs/
+.claude/
+.superpowers/
+__pycache__/
+.pytest_cache/
+launchd/
+apps/coach_web/frontend/node_modules/
+apps/coach_web/frontend/dist/

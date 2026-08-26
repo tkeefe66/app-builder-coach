@@ -1,0 +1,34 @@
+# feature-checklist.yaml — Claude Code feature surface vs. actual usage.
+# detect.commands: slash-commands whose use proves the feature is used.
+# detect.hook_substring: settings hook command containing this -> configured.
+# detect.skill: global skill dir whose presence -> configured.
+- {name: custom slash commands / skills, lesson: 01-slash-commands, detect: {commands: ["/ss", "/loop", "/simplify", "/impeccable", "/skills"]}}
+- {name: memory / CLAUDE.md editing, lesson: 02-memory, detect: {commands: ["/memory", "/init"]}}
+- {name: auto-invoked skills, lesson: 03-skills, detect: {skill: skill-promotion-audit}}
+- {name: writing your own skills, lesson: 03-skills, detect: {skill: build-coach}}
+- {name: subagent delegation, lesson: 04-subagents, detect: {commands: ["/agents"]}}
+- {name: custom subagent definitions (.claude/agents), lesson: 04-subagents, detect: {}}
+- {name: MCP servers, lesson: 05-mcp, detect: {commands: ["/mcp"]}}
+- {name: MCP resources via @-mentions, lesson: 05-mcp, detect: {}}
+- {name: Stop hooks, lesson: 06-hooks, detect: {hook_substring: skill-extraction-gate}}
+- {name: PreToolUse / PostToolUse hooks, lesson: 06-hooks, detect: {commands: ["/hooks"]}}
+- {name: prompt-type and component-scoped hooks, lesson: 06-hooks, detect: {}}
+- {name: plugins / marketplace, lesson: 07-plugins, detect: {commands: ["/plugin"]}}
+- {name: checkpoints and rewind, lesson: 08-checkpoints, detect: {commands: ["/rewind"]}}
+- {name: plan mode, lesson: 09-advanced-features, detect: {commands: ["/plan"]}}
+- {name: permission modes (acceptEdits/dontAsk), lesson: 09-advanced-features, detect: {commands: ["/permissions"]}}
+- {name: extended thinking toggle, lesson: 09-advanced-features, detect: {}}
+- {name: git worktrees (claude -w / EnterWorktree), lesson: 09-advanced-features, detect: {}}
+- {name: background tasks (Ctrl+B), lesson: 09-advanced-features, detect: {}}
+- {name: remote control / web handoff, lesson: 09-advanced-features, detect: {commands: ["/teleport", "/desktop", "/remote-control"]}}
+- {name: print mode (claude -p) in scripts, lesson: 10-cli, detect: {}}
+- {name: session resumption (-c / -r), lesson: 10-cli, detect: {}}
+- {name: structured output (--json-schema), lesson: 10-cli, detect: {}}
+- {name: compaction hygiene, lesson: 02-memory, detect: {commands: ["/compact"]}}
+- {name: model switching, lesson: 10-cli, detect: {commands: ["/model", "/fast"]}}
+- {name: config management, lesson: 09-advanced-features, detect: {commands: ["/config"]}}
+- {name: code review workflows, lesson: 09-advanced-features, detect: {commands: ["/code-review", "/review"]}}
+- {name: scheduled cloud agents (routines), lesson: 09-advanced-features, detect: {commands: ["/schedule"]}}
+- {name: recurring loops, lesson: 09-advanced-features, detect: {commands: ["/loop"]}}
+- {name: security review, lesson: 09-advanced-features, detect: {commands: ["/security-review"]}}
+- {name: cost/usage awareness, lesson: 10-cli, detect: {commands: ["/cost", "/usage", "/stats"]}}

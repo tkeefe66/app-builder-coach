@@ -1,0 +1,35 @@
+.shell { display: flex; min-height: 100vh; }
+.sidenav {
+  width: 200px; flex-shrink: 0; padding: 24px 16px;
+  border-right: 1px solid var(--border);
+  display: flex; flex-direction: column; gap: 4px;
+}
+.brand { font-weight: 700; margin-bottom: 16px; }
+.sidenav a {
+  color: var(--ink-2); text-decoration: none;
+  padding: 8px 12px; border-radius: 6px; font-size: 14px;
+}
+.sidenav a.active { color: var(--ink); background: var(--surface); font-weight: 600; }
+main { flex: 1; padding: 24px; max-width: 1080px; }
+h1 { font-size: 20px; margin: 0 0 16px; }
+.tile-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; }
+@media (max-width: 720px) {
+  .shell { flex-direction: column; }
+  .sidenav { width: auto; flex-direction: row; overflow-x: auto;
+    border-right: none; border-bottom: 1px solid var(--border); }
+  .brand { display: none; }
+}
+.chip {
+  display: inline-block; padding: 2px 8px; border-radius: 999px;
+  font-size: 12px; border: 1px solid var(--border); color: var(--ink-2);
+}
+.chip-good { border-color: var(--status-good); color: var(--good-text); }
+.chip-warn { border-color: var(--status-warn); }
+.chip-neutral { color: var(--muted); }
+.progress-track {
+  height: 8px; border-radius: 999px;
+  background: var(--grid); overflow: hidden;
+}
+.progress-fill {
+  height: 100%; border-radius: 999px; background: var(--series-1);
+}

@@ -1,0 +1,40 @@
+# App registry. Joins Railway projects to Anthropic API keys to one app identity.
+# `name` is the canonical slug and is the value apps send as "app" to /api/usage.
+apps:
+  - name: b2b-ai-news
+    display: "B2B AI News"
+    railway_project_id: 5fd75529-08bf-4c58-8923-788dbc12b475
+    anthropic_key_name: "B2B AI News"
+    active: true
+  - name: public-dynasty
+    display: "Public Dynasty"
+    railway_project_id: 834e0969-401d-44ee-8722-5d599a47013a
+    anthropic_key_name: "Public Dynasty App"
+    active: true
+  - name: purchase-inventory
+    display: "Purchase Inventory"
+    railway_project_id: 46666a8a-9322-40e9-9ed5-0d5e63947252
+    anthropic_key_name: "Purchase Inventory"
+    active: true
+  - name: app-builder-coach
+    display: "App Builder Coach"
+    railway_project_id: 9a0fc543-5688-4b67-be19-4ac7f09650f4
+    anthropic_key_name: "app-builder-coach"
+    active: true
+  - name: life-tracker
+    display: "Life Tracker"
+    railway_project_id: 01974f5d-7239-436f-9ccb-6fdca902e506
+    active: false
+  - name: tomkeefe-ai
+    display: "tomkeefe.ai"
+    railway_project_id: 54422ee4-7b67-4f68-b191-bd52983d32d9
+    active: false
+  - name: gtm-job-search
+    display: "GTM Job Search"
+    railway_project_id: e1db9a0d-c4fd-410f-aa98-75d449e961af
+    anthropic_key_name: "GTM Job Search"
+    active: false
+  - name: family-tree
+    display: "Family Tree"
+    railway_project_id: aa1a1433-fae2-4bf6-bef2-06c438b47861
+    active: false

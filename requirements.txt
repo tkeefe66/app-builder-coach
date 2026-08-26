@@ -1,0 +1,12 @@
+pyyaml>=6
+anthropic>=0.40
+pytest>=8
+fastapi
+uvicorn[standard]
+sqlalchemy>=2.0
+alembic
+psycopg[binary]
+itsdangerous
+httpx
+boto3
+cryptography

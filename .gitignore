@@ -1,0 +1,11 @@
+data/*
+!data/.gitkeep
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+.env
+.claude/worktrees/
+
+apps/coach_web/frontend/node_modules/
+apps/coach_web/frontend/dist/

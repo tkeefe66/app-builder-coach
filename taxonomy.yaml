@@ -1,0 +1,77 @@
+# taxonomy.yaml — fixed capability vocabulary. Adding a tag is a code change.
+tags:
+  - api-backend          # HTTP API services (FastAPI, Express)
+  - api-client           # consuming third-party APIs
+  - auth                 # login, sessions, OAuth
+  - background-jobs      # schedulers, cron, queues
+  - caching              # cache layers, TTLs, invalidation
+  - charts-svg           # hand-rolled charts / dataviz
+  - cli-tooling          # command-line tools and entrypoints
+  - data-modeling        # schema design, ORMs
+  - db-migrations        # schema migration mechanics
+  - deploy-docker        # Dockerfiles, container build
+  - deploy-infra         # Railway/launchd/CI wiring
+  - email-ingestion      # parsing inbound email
+  - error-handling       # redaction boundaries, safe status
+  - frontend-spa         # React/Next/Vite UI work
+  - frontend-ssr         # server rendering, RSC
+  - llm-integration      # Claude/other LLM calls
+  - llm-cost-control     # caching, throttles, skip-hashes
+  - payments-money       # money math, ledgers
+  - privacy-security     # secrets handling, private data rules
+  - scraping             # web scraping / mirroring
+  - state-machines       # lifecycle/status modeling
+  - testing-depth        # test infrastructure beyond basics
+  - webhooks             # inbound webhook handling
+  - websockets-sse       # realtime push, SSE
+  - agents-automation    # agent workflows, hooks, skills
+heuristics:
+  "auth": auth
+  "login": auth
+  "migration": db-migrations
+  "alembic": db-migrations
+  "dockerfile": deploy-docker
+  "cron": background-jobs
+  "scheduler": background-jobs
+  "cache": caching
+  "chart": charts-svg
+  "anthropic": llm-integration
+  "prompt": llm-integration
+  "webhook": webhooks
+  "scrape": scraping
+  "test_": testing-depth
+  ".spec.": testing-depth
+  "railway": deploy-infra
+  "gmail": email-ingestion
+  "receipt": email-ingestion
+  "fastapi": api-backend
+  "express": api-backend
+  "routes/": api-backend
+  "client.py": api-client
+  "requests.": api-client
+  "cli.py": cli-tooling
+  "argparse": cli-tooling
+  "makefile": cli-tooling
+  "models.py": data-modeling
+  "schema": data-modeling
+  "exception": error-handling
+  "safe_status": error-handling
+  "react": frontend-spa
+  "vite": frontend-spa
+  ".tsx": frontend-spa
+  "next.config": frontend-ssr
+  "app/layout": frontend-ssr
+  "cost": llm-cost-control
+  "throttle": llm-cost-control
+  "amount": payments-money
+  "spend": payments-money
+  "secret": privacy-security
+  "redact": privacy-security
+  "credential": privacy-security
+  "lifecycle": state-machines
+  "status": state-machines
+  "websocket": websockets-sse
+  "sse": websockets-sse
+  "skill.md": agents-automation
+  "hooks/": agents-automation
+  "subagent": agents-automation
